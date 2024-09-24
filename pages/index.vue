@@ -1,5 +1,5 @@
 <template>
-  <ApplicationBar :is-sticky="false">
+  <ApplicationBar>
     <template #left>
       <UAvatar size="md" icon="i-ph-user-bold" class="bg-gray-100"/>
       <div class="text-lg font-bold">Главная</div>

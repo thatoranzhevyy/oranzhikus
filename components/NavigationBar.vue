@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="fixed bottom-0 left-0 right-0 z-50 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl">
+  <div class="fixed bottom-0 left-0 right-0 z-50 w-full bg-white/85 dark:bg-gray-900/85 backdrop-blur-xl">
     <div class="grid grid-cols-3 max-w-3xl mx-auto h-14 p-2 gap-2">
       <NuxtLink to="/"
           class="inline-flex flex-col items-center justify-center px-5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 group">
