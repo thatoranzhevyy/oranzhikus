@@ -1,20 +1,34 @@
+<script setup>
+
+</script>
+
 <template>
-  <div class="flex items-center space-x-2 p-2 border-b-1">
-    <div class="relative inline-flex items-center justify-center flex-shrink-0 rounded-xl size-12">
-      <img class="rounded-xl size-12" src="/img/39a030f69c97ef48e811e5382a018464.png" alt="@mordecai">
+  <div class="fixed bottom-0 left-0 right-0 z-50 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl">
+    <div class="grid grid-cols-3 max-w-3xl mx-auto h-14 p-2 gap-2">
+      <NuxtLink to="/"
+          class="inline-flex flex-col items-center justify-center px-5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 group">
+        <UIcon
+            class="w-8 h-8 text-gray-500 dark:text-gray-500 group-hover:text-primary-600 dark:group-hover:text-primary-600"
+            name="i-ph-house-fill"></UIcon>
+      </NuxtLink>
+      <NuxtLink to="artstation"
+          class="inline-flex flex-col items-center justify-center px-5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 group">
+        <UIcon
+            class="w-8 h-8 text-gray-500 dark:text-gray-500 group-hover:text-primary-600 dark:group-hover:text-primary-600"
+            name="i-ph-farm-fill"></UIcon>
+      </NuxtLink>
+      <NuxtLink to="contacts"
+          class="inline-flex flex-col items-center justify-center px-5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 group">
+        <UIcon
+            class="w-8 h-8 text-gray-500 dark:text-gray-500 group-hover:text-primary-600 dark:group-hover:text-primary-600"
+            name="i-ph-users-fill"></UIcon>
+      </NuxtLink>
     </div>
-    <p class="font-bold text-primary-500">@mordecai</p>
-    <color-picker/>
   </div>
-  <hr class="h-px border-0 bg-gray-700">
-  <nav class="flex space-x-2 p-2 text-xl font-bold text-primary-300/50">
-    <nuxt-link to="/">Work zone</nuxt-link>
-    <nuxt-link to="/chill">Chill zone</nuxt-link>
-  </nav>
 </template>
 
 <style scoped>
-.router-link-exact-active {
-  @apply text-primary-600 dark:text-primary-500;
+.router-link-active span, .router-link-exact-active span {
+  @apply text-primary-500;
 }
 </style>

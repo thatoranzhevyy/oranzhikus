@@ -40,13 +40,16 @@ const appendArtworks = (newArtworks) => {
 </script>
 
 <template>
-  <div class="p-2 space-y-2 overflow-x-hidden">
-    <div v-for="artwork in artworks" class="pb-2">
-      <div class="flex items-center space-x-2 mb-2">
-        <UAvatar size="xs" :src="artwork.artist.large_avatar_url" :alt="artwork.artist.full_name"/>
-        <div class="text-xs text-slate-900 font-semibold dark:text-slate-300">{{ artwork.artist.full_name }}</div>
+  <div class="max-w-3xl mx-auto space-y-2 py-2 px-2 md:px-0">
+    <div v-for="artwork in artworks" class="bg-white dark:bg-gray-900 rounded-xl p-2 space-y-2">
+      <div class="flex items-center">
+        <UAvatar :src="artwork.artist.large_avatar_url" :alt="artwork.artist.full_name"/>
+        <div class="flex-1 min-w-0 ml-2">
+          <div class="text-sm font-semibold truncate">{{ artwork.artist.full_name }}</div>
+          <div class="text-gray-500 text-xs font-normal truncate">{{ artwork.artist.username }}</div>
+        </div>
       </div>
-      <chill-items-list :galleryID="`gallery-list-${artwork.id}`" :images="artwork.assets"/>
+      <ArtstationImages :imagesData="artwork.assets" :galleryID="`gallery-list-${artwork.id}`"/>
     </div>
     <u-button block label="Загрузить больше" @click="loadMore()" :loading="pending"/>
   </div>
