@@ -5,6 +5,7 @@ export default {
   content: [],
   theme: {},
   plugins: [
+    require('@tailwindcss/typography'),
     plugin(function ({addVariant}) {
       addVariant('hover', [
         '@media (hover: hover) { &:hover }',
