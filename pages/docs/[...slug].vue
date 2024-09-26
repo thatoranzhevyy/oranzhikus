@@ -4,7 +4,6 @@ definePageMeta({layout: 'none'});
 
 <template>
   <ContentDoc v-slot="{ doc }">
-
     <ApplicationBar>
       <template #left>
         <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-left-bold" @click="$router.back()"/>

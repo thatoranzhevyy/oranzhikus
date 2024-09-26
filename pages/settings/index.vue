@@ -36,12 +36,12 @@ const isOpenBug = ref(false)
 
 
   <UModal side="bottom" v-model="isOpenBug">
-    <div class="max-w-3xl items-center rounded-md p-0.5">
+    <div class="max-w-3xl items-center p-0.5">
       <ApplicationBar>
         <template #left>
           <UButton size="lg" color="gray" variant="ghost" icon="i-ph-x-bold"
                    @click="isOpenBug = false"/>
-          <div class="text-base font-semibold leading-6 text-gray-900 dark:text-white">Сообщить о проблеме</div>
+          <div class="text-lg font-bold leading-6 text-gray-900 dark:text-white">Сообщить о проблеме</div>
         </template>
       </ApplicationBar>
       <hr class="border-gray-200 dark:border-gray-800 mx-2">

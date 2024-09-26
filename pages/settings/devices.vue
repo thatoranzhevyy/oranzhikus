@@ -2,6 +2,9 @@
 definePageMeta({layout: 'none'});
 useSeoMeta({title: 'Устройства'});
 
+const isOpenDisconnectAll = ref(false);
+const isOpenDevice = ref(false);
+
 const current_device = {
   "name": "Android 6.0 \/ Chrome Mobile 129.0",
   "ip": "81.88.148.8",
@@ -67,7 +70,8 @@ const devices = [
     <div class="bg-white dark:bg-gray-900 rounded-md p-1">
       <div class="px-3.5 py-2 font-semibold">Текущее устройство</div>
       <div>
-        <div class="flex items-center px-2 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
+        <div class="flex items-center px-2 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
+             @click="isOpenDevice = true">
           <UAvatar icon="i-ph-devices" size="md"/>
           <div class="flex-1 min-w-0 ml-2">
             <div class="text-sm font-semibold truncate">{{ current_device.name }}</div>
@@ -77,7 +81,7 @@ const devices = [
           </div>
         </div>
         <UButton icon="i-ph-minus-circle-bold" size="xl" color="red" variant="ghost" label="Завершить все другие сеансы"
-                 block class="justify-start"/>
+                 block class="justify-start" @click="isOpenDisconnectAll = true"/>
       </div>
     </div>
     <div class="text-gray-500 text-xs font-normal px-4">
@@ -101,4 +105,43 @@ const devices = [
       </div>
     </div>
   </div>
+  <UModal v-model="isOpenDisconnectAll">
+    <div class="p-5 flow-root space-y-6">
+      <div class="space-y-4">
+        <div class="text-lg font-bold leading-6">
+          Завершить сеансы
+        </div>
+        <div>Вы точно хотите завершить все сеансы, кроме текущего?</div>
+      </div>
+      <div class="float-right space-x-4">
+        <UButton label="Отмена" color="primary" variant="ghost" @click="isOpenDisconnectAll = false"/>
+        <UButton label="Завершить" color="red" variant="ghost" @click="isOpenDisconnectAll = false"/>
+      </div>
+    </div>
+  </UModal>
+  <UModal v-model="isOpenDevice">
+    <div class="p-0.5">
+      <ApplicationBar>
+        <template #left>
+          <UButton size="lg" color="gray" variant="ghost" icon="i-ph-x-bold" @click="isOpenDevice = false"/>
+          <div class="text-lg font-bold leading-6 text-gray-900 dark:text-white">Сеанс</div>
+        </template>
+        <template #right>
+          <UButton size="lg" color="red" variant="ghost" label="Завершить сеанс"
+                   @click="isOpenDevice = false"/>
+        </template>
+      </ApplicationBar>
+      <div class="p-2 space-y-6">
+        <div class="flex flex-col items-center">
+          <UAvatar icon="i-ph-devices" size="xl"/>
+          <div class="text-lg font-bold leading-6">
+            {{ current_device.name }}
+          </div>
+          <div class="text-gray-500 text-xs font-normal truncate">
+            {{ current_device.ip }}: <span class="text-primary-500">{{ current_device.last_used_at }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </UModal>
 </template>
