@@ -1,5 +1,6 @@
 <script setup lang="ts">
 definePageMeta({layout: 'none'});
+useSeoMeta({title: 'Вопросы и ответы'});
 const items = [{
   label: 'Как я могу опубликовать мем на вашем сайте?',
   defaultOpen: true,
@@ -42,9 +43,9 @@ const items = [{
           <span class="truncate">{{ index + 1 }}. {{ item.label }}</span>
           <template #trailing>
             <UIcon
-              name="i-heroicons-chevron-right-20-solid"
-              class="w-5 h-5 ms-auto transform transition-transform duration-200"
-              :class="[open && 'rotate-90']"
+                name="i-heroicons-chevron-right-20-solid"
+                class="w-5 h-5 ms-auto transform transition-transform duration-200"
+                :class="[open && 'rotate-90']"
             />
           </template>
         </UButton>
