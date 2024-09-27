@@ -33,7 +33,7 @@ const isOpen = ref(false)
              src="https://workman.buhe.su/storage/posts/9d0a77dd-2d2b-48d3-b71d-fa7d0a74b037/QcGydStHmtVMH9TApSP39SBujv9MKhRfr78dpuAk.jpg">
       </div>
       <div>
-        <u-button size="xs" color="red" variant="ghost" icon="i-ph-heart-bold" label="233"/>
+        <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="233"/>
         <u-button size="xs" color="gray" variant="ghost" icon="i-ph-chat-circle-bold" label="233" @click="isOpen = true"/>
         <u-button size="xs" color="gray" variant="ghost" icon="i-ph-share-fat-bold" label="1"/>
       </div>
@@ -109,7 +109,7 @@ const isOpen = ref(false)
                src="https://workman.buhe.su/storage/posts/9d0a77dd-2d2b-48d3-b71d-fa7d0a74b037/QcGydStHmtVMH9TApSP39SBujv9MKhRfr78dpuAk.jpg">
         </div>
         <div>
-          <u-button size="xs" color="red" variant="ghost" icon="i-ph-heart-bold" label="233"/>
+          <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="233"/>
           <u-button size="xs" color="gray" variant="ghost" icon="i-ph-share-fat-bold" label="1"/>
         </div>
         <hr class="border-gray-200 dark:border-gray-800 mx-2">
@@ -117,5 +117,4 @@ const isOpen = ref(false)
       </div>
     </div>
   </USlideover>
-
 </template>
