@@ -4,6 +4,7 @@ useSeoMeta({title: 'Устройства'});
 
 const isOpenDisconnectAll = ref(false);
 const isOpenDevice = ref(false);
+const isOpenDeviceAccept = ref(false);
 
 const current_device = {
   "name": "Android 6.0 \/ Chrome Mobile 129.0",
@@ -119,6 +120,7 @@ const devices = [
       </div>
     </div>
   </UModal>
+
   <UModal v-model="isOpenDevice">
     <div class="p-0.5">
       <ApplicationBar>
@@ -128,7 +130,7 @@ const devices = [
         </template>
         <template #right>
           <UButton size="lg" color="red" variant="ghost" label="Завершить сеанс"
-                   @click="isOpenDevice = false"/>
+                   @click="isOpenDeviceAccept = true"/>
         </template>
       </ApplicationBar>
       <div class="p-2 space-y-6">
@@ -143,5 +145,19 @@ const devices = [
         </div>
       </div>
     </div>
+    <UModal v-model="isOpenDeviceAccept">
+      <div class="p-5 flow-root space-y-6">
+        <div class="space-y-4">
+          <div class="text-lg font-bold leading-6">
+            Завершить сеанс
+          </div>
+          <div>Вы точно хотите завершить сеанс?</div>
+        </div>
+        <div class="float-right space-x-4">
+          <UButton label="Отмена" color="primary" variant="ghost" @click="isOpenDeviceAccept = false"/>
+          <UButton label="Завершить" color="red" variant="ghost" @click="isOpenDeviceAccept = false"/>
+        </div>
+      </div>
+    </UModal>
   </UModal>
 </template>

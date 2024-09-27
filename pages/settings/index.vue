@@ -39,8 +39,7 @@ const isOpenBug = ref(false)
     <div class="max-w-3xl items-center p-0.5">
       <ApplicationBar>
         <template #left>
-          <UButton size="lg" color="gray" variant="ghost" icon="i-ph-x-bold"
-                   @click="isOpenBug = false"/>
+          <UButton size="lg" color="gray" variant="ghost" icon="i-ph-x-bold" @click="isOpenBug = false"/>
           <div class="text-lg font-bold leading-6 text-gray-900 dark:text-white">Сообщить о проблеме</div>
         </template>
       </ApplicationBar>

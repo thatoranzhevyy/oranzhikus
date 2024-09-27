@@ -24,6 +24,8 @@ useSeoMeta({title: 'О приложении'});
       <div class="p-1">
         <UButton to="/docs/user-agreement" icon="i-ph-handshake-bold" size="xl" color="gray" variant="ghost"
                  label="Пользовательское соглашение" block class="justify-start"/>
+        <UButton to="/docs/privacy-policy" icon="i-ph-certificate-bold" size="xl" color="gray" variant="ghost"
+                 label="Политика конфиденциальности" block class="justify-start"/>
       </div>
     </div>
   </div>
