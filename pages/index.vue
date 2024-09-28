@@ -1,5 +1,12 @@
 <script setup lang="ts">
 const isOpen = ref(false)
+const items = [
+  [{
+    label: 'Скопировать ссылку'
+  }, {
+    label: 'Пожаловаться'
+  }]
+]
 </script>
 
 <template>
@@ -20,7 +27,9 @@ const isOpen = ref(false)
           <div class="font-semibold truncate">Алла Сергеевна Филиппова</div>
           <div class="text-gray-500 text-xs font-normal truncate">9 дней назад</div>
         </div>
-        <UButton size="lg" color="gray" variant="ghost" icon="i-ph-dots-three-vertical-bold"/>
+        <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
+          <UButton size="lg" color="gray" variant="ghost" icon="i-ph-dots-three-vertical-bold"/>
+        </UDropdown>
       </div>
       <div class="text-sm whitespace-pre-wrap">
         <span class="select-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
@@ -34,7 +43,7 @@ const isOpen = ref(false)
       </div>
       <div>
         <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="233"/>
-        <u-button size="xs" color="gray" variant="ghost" icon="i-ph-chat-circle-bold" label="233"
+        <u-button size="xs" color="gray" variant="ghost" icon="i-ph-chat-circle-bold" label="2"
                   @click="isOpen = true"/>
         <u-button size="xs" color="gray" variant="ghost" icon="i-ph-share-fat-bold" label="1"/>
       </div>
@@ -48,7 +57,10 @@ const isOpen = ref(false)
         <div class="text-lg font-bold">Запись на стене</div>
       </template>
       <template #right>
-        <UButton size="lg" color="gray" variant="ghost" icon="i-ph-dots-three-vertical-bold"/>
+
+        <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
+          <UButton size="lg" color="gray" variant="ghost" icon="i-ph-dots-three-vertical-bold"/>
+        </UDropdown>
       </template>
     </ApplicationBar>
 
@@ -110,42 +122,46 @@ const isOpen = ref(false)
                src="https://workman.buhe.su/storage/posts/9d0a77dd-2d2b-48d3-b71d-fa7d0a74b037/QcGydStHmtVMH9TApSP39SBujv9MKhRfr78dpuAk.jpg">
         </div>
         <div>
-          <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="233"/>
+          <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="2"/>
           <u-button size="xs" color="gray" variant="ghost" icon="i-ph-share-fat-bold" label="1"/>
         </div>
         <hr class="border-gray-200 dark:border-gray-800 mx-2">
         <div class="space-y-2">
           <div class="flex items-center justify-between">
-            <div class="text-gray-500 text-sm font-semibold truncate">233 Комментариев</div>
+            <div class="text-gray-500 text-sm font-semibold truncate">2 Комментариев</div>
             <UButton variant="outline" size="2xs" label="Сначало интересные">
               <template #trailing>
                 <UIcon name="i-ph-caret-down" class="size-4"/>
               </template>
             </UButton>
           </div>
-          <div>
-            <div class="space-y-2">
-              <div class="flex">
-                <UAvatar alt="Ника Максимовна Андреева" size="md"/>
-                <div class="flex-1 min-w-0 ml-2">
-                  <div class="text-sm font-semibold truncate">Ника Максимовна Андреева</div>
-                  <div class="text-xs font-normal">Very straight-to-point article. Really worth time
-                    reading. Thank you! But tools are just the instruments for the UX designers. The knowledge of the
-                    design tools are as important as the creation of the design strategy.
-                  </div>
-                  <div class="text-gray-400 text-xs font-normal truncate">сегодня в 10:27</div>
+          <div class="space-y-2">
+            <div class="flex">
+              <UAvatar alt="Ника Максимовна Андреева" size="md"/>
+              <div class="flex-1 min-w-0 ml-2">
+                <div class="text-sm font-semibold truncate">Ника Максимовна Андреева</div>
+                <div class="text-xs font-normal">Very straight-to-point article. Really worth time
+                  reading. Thank you! But tools are just the instruments for the UX designers. The knowledge of the
+                  design tools are as important as the creation of the design strategy.
                 </div>
+                <div class="text-gray-400 text-xs font-normal truncate">сегодня в 10:27</div>
               </div>
-              <div class="flex">
-                <UAvatar alt="Фёдор Александрович Авдеев" size="md"/>
-                <div class="flex-1 min-w-0 ml-2">
-                  <div class="text-sm font-semibold truncate">Фёдор Александрович Авдеев</div>
-                  <div class="text-xs font-normal">
-                    Much appreciated! Glad you liked it ☺️
-                  </div>
-                  <div class="text-gray-400 text-xs font-normal truncate">сегодня в 6:09</div>
+            </div>
+            <div class="flex">
+              <UAvatar alt="Фёдор Александрович Авдеев" size="md"/>
+              <div class="flex-1 min-w-0 ml-2">
+                <div class="text-sm font-semibold truncate">Фёдор Александрович Авдеев</div>
+                <div class="text-xs font-normal">
+                  Much appreciated! Glad you liked it ☺️
                 </div>
+                <div class="text-gray-400 text-xs font-normal truncate">сегодня в 6:09</div>
               </div>
+            </div>
+          </div>
+          <div class="sticky bottom-0 pb-2 z-[55] bg-white dark:bg-gray-900">
+            <div class=" flex gap-2">
+              <UInput class="w-full" placeholder="Комментрии"/>
+              <UButton color="gray" variant="ghost" label="Отправить"/>
             </div>
           </div>
         </div>
