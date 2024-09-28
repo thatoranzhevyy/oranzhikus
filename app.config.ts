@@ -1,13 +1,13 @@
 export default defineAppConfig({
   ui: {
     primary: 'purple',
-    gray: 'neutral'
+    gray: 'neutral',
+    button: {
+      color: {
+        gray: {
+          ghost: 'hover:bg-gray-100',
+        },
+      }
+    },
   },
-  button: {
-    color: {
-      gray: {
-        ghost: 'hover:bg-gray-100',
-      },
-    }
-  }
 })
