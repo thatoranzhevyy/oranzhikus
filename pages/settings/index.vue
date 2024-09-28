@@ -18,6 +18,8 @@ const isOpenBug = ref(false)
                label="Внешний вид" block class="justify-start"/>
       <UButton to="/settings/devices" icon="i-ph-devices-bold" size="xl" color="gray" variant="ghost"
                label="Устройства" block class="justify-start"/>
+      <UButton to="/login" icon="i-ph-sign-out-bold" size="xl" variant="ghost"
+               label="Выйти" block class="justify-start"/>
     </div>
     <div class="bg-white dark:bg-gray-900 rounded-md p-1">
       <div class="px-4 pt-2 font-semibold">Помощь</div>
@@ -39,7 +41,7 @@ const isOpenBug = ref(false)
           <div class="text-lg font-bold leading-6 text-gray-900 dark:text-white">Сообщить о проблеме</div>
         </template>
       </ApplicationBar>
-      <hr class="border-gray-200 dark:border-gray-800 mx-2">
+      <UDivider class="px-2"/>
       <div class="p-2 space-y-2">
         <textarea
             class="h-64 relative block w-full focus:outline-none border-0 form-textarea rounded-md placeholder-gray-400 dark:placeholder-gray-500 text-xl p-0 bg-transparent focus:ring-0 focus:shadow-none resize-none"
