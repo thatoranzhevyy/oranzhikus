@@ -17,7 +17,7 @@ const isOpen = ref(false)
       <div class="flex items-center">
         <UAvatar alt="ЕЫ" size="md"/>
         <div class="flex-1 min-w-0 ml-2">
-          <div class="text-sm font-semibold truncate">Test</div>
+          <div class="font-semibold truncate">Test</div>
           <div class="text-gray-500 text-xs font-normal truncate">sdkfm;lk</div>
         </div>
         <UButton size="lg" color="gray" variant="ghost" icon="i-ph-dots-three-vertical-bold"/>
@@ -34,7 +34,8 @@ const isOpen = ref(false)
       </div>
       <div>
         <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="233"/>
-        <u-button size="xs" color="gray" variant="ghost" icon="i-ph-chat-circle-bold" label="233" @click="isOpen = true"/>
+        <u-button size="xs" color="gray" variant="ghost" icon="i-ph-chat-circle-bold" label="233"
+                  @click="isOpen = true"/>
         <u-button size="xs" color="gray" variant="ghost" icon="i-ph-share-fat-bold" label="1"/>
       </div>
     </div>
@@ -57,13 +58,13 @@ const isOpen = ref(false)
         <div class="flex items-center">
           <UAvatar alt="ЕЫ" size="md"/>
           <div class="flex-1 min-w-0 ml-2">
-            <div class="text-sm font-semibold truncate">Test</div>
+            <div class=" font-semibold truncate">Test</div>
             <div class="text-gray-500 text-xs font-normal truncate">sdkfm;lk</div>
           </div>
         </div>
         <div class="text-sm whitespace-pre-wrap">
-          <div class="select-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          <div class="select-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
             electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of

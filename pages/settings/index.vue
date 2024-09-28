@@ -13,24 +13,20 @@ const isOpenBug = ref(false)
     </template>
   </ApplicationBar>
   <div class="max-w-3xl mx-auto space-y-2 p-1.5">
-    <div class="bg-white dark:bg-gray-900 rounded-md">
-      <div class="p-1">
-        <UButton to="/settings/appearance" icon="i-ph-palette-bold" size="xl" color="gray" variant="ghost"
-                 label="Внешний вид" block class="justify-start"/>
-        <UButton to="/settings/devices" icon="i-ph-devices-bold" size="xl" color="gray" variant="ghost"
-                 label="Устройства" block class="justify-start"/>
-      </div>
+    <div class="bg-white dark:bg-gray-900 rounded-md p-1">
+      <UButton to="/settings/appearance" icon="i-ph-palette-bold" size="xl" color="gray" variant="ghost"
+               label="Внешний вид" block class="justify-start"/>
+      <UButton to="/settings/devices" icon="i-ph-devices-bold" size="xl" color="gray" variant="ghost"
+               label="Устройства" block class="justify-start"/>
     </div>
-    <div class="bg-white dark:bg-gray-900 rounded-md">
+    <div class="bg-white dark:bg-gray-900 rounded-md p-1">
       <div class="px-4 pt-2 font-semibold">Помощь</div>
-      <div class="p-1">
-        <UButton to="/settings/faq" icon="i-ph-question-bold" size="xl" color="gray" variant="ghost"
-                 label="Вопросы и ответы" block class="justify-start"/>
-        <UButton icon="i-ph-bug-bold" size="xl" color="gray" variant="ghost" @click="isOpenBug = true"
-                 label="Сообщить о проблеме" block class="justify-start"/>
-        <UButton to="/settings/about" icon="i-ph-info-bold" size="xl" color="gray" variant="ghost" label="О приложении"
-                 block class="justify-start"/>
-      </div>
+      <UButton to="/settings/faq" icon="i-ph-question-bold" size="xl" color="gray" variant="ghost"
+               label="Вопросы и ответы" block class="justify-start"/>
+      <UButton icon="i-ph-bug-bold" size="xl" color="gray" variant="ghost" @click="isOpenBug = true"
+               label="Сообщить о проблеме" block class="justify-start"/>
+      <UButton to="/settings/about" icon="i-ph-info-bold" size="xl" color="gray" variant="ghost" label="О приложении"
+               block class="justify-start"/>
     </div>
   </div>
 

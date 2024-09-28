@@ -75,7 +75,7 @@ const devices = [
              @click="isOpenDevice = true">
           <UAvatar icon="i-ph-devices" size="md"/>
           <div class="flex-1 min-w-0 ml-2">
-            <div class="text-sm font-semibold truncate">{{ current_device.name }}</div>
+            <div class="font-semibold truncate">{{ current_device.name }}</div>
             <div class="text-gray-500 text-xs font-normal truncate">
               {{ current_device.ip }}: <span class="text-primary-500">{{ current_device.last_used_at }}</span>
             </div>
@@ -97,7 +97,7 @@ const devices = [
         <div class="flex items-center px-2 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
           <UAvatar icon="i-ph-devices" size="md"/>
           <div class="flex-1 min-w-0 ml-2">
-            <div class="text-sm font-semibold truncate">{{ device.name }}</div>
+            <div class="font-semibold truncate">{{ device.name }}</div>
             <div class="text-gray-500 text-xs font-normal truncate">
               {{ device.ip }}: <span class="text-primary-500">{{ device.last_used_at }}</span>
             </div>

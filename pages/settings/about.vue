@@ -20,13 +20,17 @@ useSeoMeta({title: 'О приложении'});
         <div class="text-gray-500 text-xs font-normal">версия 0.1.0 x64</div>
       </div>
     </div>
-    <div class="bg-white dark:bg-gray-900 rounded-md">
-      <div class="p-1">
-        <UButton to="/docs/user-agreement" icon="i-ph-handshake-bold" size="xl" color="gray" variant="ghost"
-                 label="Пользовательское соглашение" block class="justify-start"/>
-        <UButton to="/docs/privacy-policy" icon="i-ph-certificate-bold" size="xl" color="gray" variant="ghost"
-                 label="Политика конфиденциальности" block class="justify-start"/>
-      </div>
+    <div class="bg-white dark:bg-gray-900 rounded-md p-1">
+      <UButton to="https://github.com/thatoranzhevyy" target="_blank" icon="i-ph-star-four-bold" size="xl" color="gray"
+               variant="ghost" label="Оценить приложение" block class="justify-start"/>
+    </div>
+    <div class="bg-white dark:bg-gray-900 rounded-md p-1">
+      <UButton to="/docs/user-agreement" icon="i-ph-handshake-bold" size="xl" color="gray" variant="ghost"
+               label="Пользовательское соглашение" block class="justify-start"/>
+      <UButton to="/docs/privacy-policy" icon="i-ph-certificate-bold" size="xl" color="gray" variant="ghost"
+               label="Политика конфиденциальности" block class="justify-start"/>
+      <UButton to="/docs/example" icon="i-ph-file-md-bold" size="xl" color="gray" variant="ghost"
+               label="Пример документа" block class="justify-start"/>
     </div>
   </div>
 </template>

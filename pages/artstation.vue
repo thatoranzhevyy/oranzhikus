@@ -40,7 +40,7 @@ const appendArtworks = (newArtworks) => {
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto space-y-2 py-2 px-2 md:px-0">
+  <div class="max-w-3xl mx-auto space-y-1.5 p-1.5">
     <div v-for="artwork in artworks" class="bg-white dark:bg-gray-900 rounded-xl p-2 space-y-2">
       <div class="flex items-center">
         <UAvatar :src="artwork.artist.large_avatar_url" :alt="artwork.artist.full_name"/>

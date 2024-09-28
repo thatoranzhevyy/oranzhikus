@@ -253,7 +253,7 @@ const users = [
       <div class="flex items-center px-2 py-1.5 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
         <UAvatar :alt="user.name ?? user.username" size="md"/>
         <div class="flex-1 min-w-0 ml-2">
-          <div class="text-sm font-semibold truncate">{{ user.name ?? user.username }}</div>
+          <div class="font-semibold truncate">{{ user.name ?? user.username }}</div>
           <div class="text-gray-500 text-xs font-normal truncate">
             {{ user.email || '@' + user.username }}
           </div>

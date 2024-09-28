@@ -2,6 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: {enabled: true},
-  modules: ['@nuxt/ui', '@nuxt/content'],
+  modules: ['@nuxt/ui', '@nuxt/content', "@nuxt/image"],
   app: {head: {bodyAttrs: {class: 'bg-gray-100 dark:bg-gray-950 select-none'}}},
 })
