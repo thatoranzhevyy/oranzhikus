@@ -13,10 +13,10 @@ useSeoMeta({title: 'О приложении'});
   <div class="max-w-3xl mx-auto space-y-2 p-1.5">
     <div class="flex flex-col items-center py-4 space-y-8">
       <div class="size-52 rounded-xl bg-primary-200/70">
-        <UIcon name="i-ph-dog" class="size-52 text-gray-800"/>
+        <UIcon name="i-ph-rocket" class="size-52 text-gray-800"/>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="text-xl font-bold">Nuxt Application</div>
+        <div class="text-xl font-bold">Zymyran Application</div>
         <div class="text-gray-500 text-xs font-normal">версия 0.1.0 x64</div>
         <a href="https://app.netlify.com/sites/coruscating-brioche-c8806e/deploys">
           <img src="https://api.netlify.com/api/v1/badges/462ada0f-691d-4386-8898-8f49389debf1/deploy-status"

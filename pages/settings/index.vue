@@ -16,8 +16,12 @@ const isOpenBug = ref(false)
     <div class="bg-white dark:bg-gray-900 rounded-md p-1">
       <UButton to="/settings/appearance" icon="i-ph-palette-bold" size="xl" color="gray" variant="ghost"
                label="Внешний вид" block class="justify-start"/>
+      <UButton to="/settings/language" icon="i-ph-translate-bold" size="xl" color="gray" variant="ghost"
+               label="Язык" block class="justify-start"/>
       <UButton to="/settings/devices" icon="i-ph-devices-bold" size="xl" color="gray" variant="ghost"
                label="Устройства" block class="justify-start"/>
+      <UButton to="/settings/change-password" icon="i-ph-password-bold" size="xl" color="gray" variant="ghost"
+               label="Сменить пароль" block class="justify-start"/>
       <UButton to="/login" icon="i-ph-sign-out-bold" size="xl" variant="ghost"
                label="Выйти" block class="justify-start"/>
     </div>

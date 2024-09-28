@@ -1,5 +1,6 @@
 <script setup lang="ts">
 definePageMeta({layout: 'none'});
+useSeoMeta({title: 'Авторизация'});
 
 const isOpenHelp = ref(false);
 </script>

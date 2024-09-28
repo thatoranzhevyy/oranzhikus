@@ -1,4 +1,5 @@
 <script setup lang="ts">
+useSeoMeta({title: 'Главная'});
 const isOpen = ref(false)
 const items = [
   [{
@@ -57,14 +58,12 @@ const items = [
         <div class="text-lg font-bold">Запись на стене</div>
       </template>
       <template #right>
-
         <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
           <UButton size="lg" color="gray" variant="ghost" icon="i-ph-dots-three-vertical-bold"/>
         </UDropdown>
       </template>
     </ApplicationBar>
-
-    <hr class="border-gray-200 dark:border-gray-800 mx-2">
+    <UDivider class="px-2"/>
     <div class="max-w-3xl mx-auto space-y-2 overflow-y-auto">
       <div class="bg-white dark:bg-gray-900 rounded-md p-2 space-y-2">
         <div class="flex items-center">
@@ -125,7 +124,8 @@ const items = [
           <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="2"/>
           <u-button size="xs" color="gray" variant="ghost" icon="i-ph-share-fat-bold" label="1"/>
         </div>
-        <hr class="border-gray-200 dark:border-gray-800 mx-2">
+
+        <UDivider class="px-2"/>
         <div class="space-y-2">
           <div class="flex items-center justify-between">
             <div class="text-gray-500 text-sm font-semibold truncate">2 Комментариев</div>

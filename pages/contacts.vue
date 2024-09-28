@@ -1,4 +1,5 @@
 <script setup lang="ts">
+useSeoMeta({title: 'Контакты'});
 const users = [
   {
     "id": "9d0fb49d-5050-45cf-8253-a21b8200fa6c",

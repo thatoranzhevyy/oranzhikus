@@ -1,4 +1,5 @@
 <script setup lang="ts">
+useSeoMeta({title: 'Каеффф зона'});
 const page = ref(1);
 const lastPage = ref(1);
 const isLoaded = ref(false);
