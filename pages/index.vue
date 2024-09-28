@@ -158,10 +158,11 @@ const items = [
               </div>
             </div>
           </div>
-          <div class="sticky bottom-0 pb-2 z-[55] bg-white dark:bg-gray-900">
-            <div class=" flex gap-2">
-              <UInput class="w-full" placeholder="Комментрии"/>
-              <UButton color="gray" variant="ghost" label="Отправить"/>
+          <div class="sticky bottom-0 py-1 z-[55] bg-white dark:bg-gray-900">
+            <div class="flex">
+              <UButton color="gray" variant="ghost" icon="i-ph-paperclip"/>
+              <UTextarea :rows="1" autoresize :maxrows="3" variant="none" class="w-full" placeholder="Комментрии"/>
+              <UButton variant="ghost" icon="i-ph-paper-plane-right"/>
             </div>
           </div>
         </div>
