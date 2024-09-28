@@ -15,10 +15,10 @@ const isOpen = ref(false)
   <div class="max-w-3xl mx-auto space-y-2 p-1.5">
     <div class="bg-white dark:bg-gray-900 rounded-md p-2 space-y-2">
       <div class="flex items-center">
-        <UAvatar alt="ЕЫ" size="md"/>
+        <UAvatar alt="Алла Сергеевна Филиппова" size="md"/>
         <div class="flex-1 min-w-0 ml-2">
-          <div class="font-semibold truncate">Test</div>
-          <div class="text-gray-500 text-xs font-normal truncate">sdkfm;lk</div>
+          <div class="font-semibold truncate">Алла Сергеевна Филиппова</div>
+          <div class="text-gray-500 text-xs font-normal truncate">9 дней назад</div>
         </div>
         <UButton size="lg" color="gray" variant="ghost" icon="i-ph-dots-three-vertical-bold"/>
       </div>
@@ -56,10 +56,10 @@ const isOpen = ref(false)
     <div class="max-w-3xl mx-auto space-y-2 overflow-y-auto">
       <div class="bg-white dark:bg-gray-900 rounded-md p-2 space-y-2">
         <div class="flex items-center">
-          <UAvatar alt="ЕЫ" size="md"/>
+          <UAvatar alt="Алла Сергеевна Филиппова" size="md"/>
           <div class="flex-1 min-w-0 ml-2">
-            <div class=" font-semibold truncate">Test</div>
-            <div class="text-gray-500 text-xs font-normal truncate">sdkfm;lk</div>
+            <div class="font-semibold truncate">Алла Сергеевна Филиппова</div>
+            <div class="text-gray-500 text-xs font-normal truncate">9 дней назад</div>
           </div>
         </div>
         <div class="text-sm whitespace-pre-wrap">
@@ -114,7 +114,41 @@ const isOpen = ref(false)
           <u-button size="xs" color="gray" variant="ghost" icon="i-ph-share-fat-bold" label="1"/>
         </div>
         <hr class="border-gray-200 dark:border-gray-800 mx-2">
-        <div>233 Комментариев</div>
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="text-gray-500 text-sm font-semibold truncate">233 Комментариев</div>
+            <UButton variant="outline" size="2xs" label="Сначало интересные">
+              <template #trailing>
+                <UIcon name="i-ph-caret-down" class="size-4"/>
+              </template>
+            </UButton>
+          </div>
+          <div>
+            <div class="space-y-2">
+              <div class="flex">
+                <UAvatar alt="Ника Максимовна Андреева" size="md"/>
+                <div class="flex-1 min-w-0 ml-2">
+                  <div class="text-sm font-semibold truncate">Ника Максимовна Андреева</div>
+                  <div class="text-xs font-normal">Very straight-to-point article. Really worth time
+                    reading. Thank you! But tools are just the instruments for the UX designers. The knowledge of the
+                    design tools are as important as the creation of the design strategy.
+                  </div>
+                  <div class="text-gray-400 text-xs font-normal truncate">сегодня в 10:27</div>
+                </div>
+              </div>
+              <div class="flex">
+                <UAvatar alt="Фёдор Александрович Авдеев" size="md"/>
+                <div class="flex-1 min-w-0 ml-2">
+                  <div class="text-sm font-semibold truncate">Фёдор Александрович Авдеев</div>
+                  <div class="text-xs font-normal">
+                    Much appreciated! Glad you liked it ☺️
+                  </div>
+                  <div class="text-gray-400 text-xs font-normal truncate">сегодня в 6:09</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </USlideover>

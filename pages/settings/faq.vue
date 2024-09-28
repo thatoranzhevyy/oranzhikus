@@ -32,7 +32,7 @@ const items = [{
 <template>
   <ApplicationBar>
     <template #left>
-      <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-left-bold" @click="$router.back()"/>
+      <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-left-bold" to="/settings"/>
       <div class="text-lg font-bold">Вопросы и ответы</div>
     </template>
   </ApplicationBar>

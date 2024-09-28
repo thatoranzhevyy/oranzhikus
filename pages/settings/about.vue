@@ -6,7 +6,7 @@ useSeoMeta({title: 'О приложении'});
 <template>
   <ApplicationBar>
     <template #left>
-      <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-left-bold" @click="$router.back()"/>
+      <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-left-bold" to="/settings"/>
       <div class="text-lg font-bold">О приложении</div>
     </template>
   </ApplicationBar>
@@ -15,9 +15,13 @@ useSeoMeta({title: 'О приложении'});
       <div class="size-52 rounded-xl bg-primary-200/70">
         <UIcon name="i-ph-dog" class="size-52 text-gray-800"/>
       </div>
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center gap-2">
         <div class="text-xl font-bold">Nuxt Application</div>
         <div class="text-gray-500 text-xs font-normal">версия 0.1.0 x64</div>
+        <a href="https://app.netlify.com/sites/coruscating-brioche-c8806e/deploys">
+          <img src="https://api.netlify.com/api/v1/badges/462ada0f-691d-4386-8898-8f49389debf1/deploy-status"
+               alt="Netlify Status">
+        </a>
       </div>
     </div>
     <div class="bg-white dark:bg-gray-900 rounded-md p-1">

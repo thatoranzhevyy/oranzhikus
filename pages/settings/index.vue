@@ -8,7 +8,7 @@ const isOpenBug = ref(false)
 <template>
   <ApplicationBar>
     <template #left>
-      <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-left-bold" @click="$router.back()"/>
+      <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-left-bold" to="/"/>
       <div class="text-lg font-bold">Настройки</div>
     </template>
   </ApplicationBar>
