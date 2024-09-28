@@ -4,4 +4,5 @@ export default defineNuxtConfig({
   devtools: {enabled: true},
   modules: ['@nuxt/ui', '@nuxt/content', "@nuxt/image"],
   app: {head: {bodyAttrs: {class: 'bg-gray-100 dark:bg-gray-950 select-none'}}},
+  css: ['~/styles/scrollbars.css'],
 })

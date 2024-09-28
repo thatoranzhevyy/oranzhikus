@@ -129,15 +129,10 @@ const items = [
         <div class="space-y-2">
           <div class="flex items-center justify-between">
             <div class="text-gray-500 text-sm font-semibold truncate">2 Комментариев</div>
-            <UButton variant="outline" size="2xs" label="Сначало интересные">
-              <template #trailing>
-                <UIcon name="i-ph-caret-down" class="size-4"/>
-              </template>
-            </UButton>
           </div>
           <div class="space-y-2">
             <div class="flex">
-              <UAvatar alt="Ника Максимовна Андреева" size="md"/>
+              <UAvatar alt="Ника Максимовна Андреева" size="sm"/>
               <div class="flex-1 min-w-0 ml-2">
                 <div class="text-sm font-semibold truncate">Ника Максимовна Андреева</div>
                 <div class="text-xs font-normal">Very straight-to-point article. Really worth time
@@ -148,7 +143,7 @@ const items = [
               </div>
             </div>
             <div class="flex">
-              <UAvatar alt="Фёдор Александрович Авдеев" size="md"/>
+              <UAvatar alt="Фёдор Александрович Авдеев" size="sm"/>
               <div class="flex-1 min-w-0 ml-2">
                 <div class="text-sm font-semibold truncate">Фёдор Александрович Авдеев</div>
                 <div class="text-xs font-normal">
