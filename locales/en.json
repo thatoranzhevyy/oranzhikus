@@ -1,0 +1,8 @@
+{
+  "helloWorld" : "Hello World",
+  "settings": {
+    "language": {
+      "title": "Application language"
+    }
+  }
+}

@@ -14,7 +14,7 @@ const items = [
   <ApplicationBar>
     <template #left>
       <UAvatar size="md" icon="i-ph-user-bold" class="bg-gray-100"/>
-      <div class="text-lg font-bold">Главная</div>
+      <div class="text-lg font-bold">Главная  {{ $t("helloWorld") }}</div>
     </template>
     <template #right>
       <UButton size="lg" color="gray" variant="ghost" icon="i-ph-list-bold" to="settings"/>
@@ -43,7 +43,7 @@ const items = [
              src="https://workman.buhe.su/storage/posts/9d0a77dd-2d2b-48d3-b71d-fa7d0a74b037/QcGydStHmtVMH9TApSP39SBujv9MKhRfr78dpuAk.jpg">
       </div>
       <div>
-        <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="233"/>
+        <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="2"/>
         <u-button size="xs" color="gray" variant="ghost" icon="i-ph-chat-circle-bold" label="2"
                   @click="isOpen = true"/>
         <u-button size="xs" color="gray" variant="ghost" icon="i-ph-share-fat-bold" label="1"/>

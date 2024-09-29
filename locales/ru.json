@@ -1,0 +1,8 @@
+{
+  "helloWorld" : "Привет мир",
+  "settings": {
+    "language": {
+      "title": "Язык приложения"
+    }
+  }
+}
