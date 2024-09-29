@@ -1,8 +1,10 @@
 {
   "helloWorld" : "Hello World",
   "settings": {
+    "title": "Settings",
     "language": {
-      "title": "Application language"
+      "title": "Application language",
+      "label": "Languages"
     }
   }
 }

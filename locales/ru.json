@@ -1,8 +1,22 @@
 {
   "helloWorld" : "Привет мир",
   "settings": {
+    "title": "Настройки",
+    "appearance": {
+      "label": "Внешний вид"
+    },
+    "devices": {
+      "label": "Устройства"
+    },
+    "change-password": {
+      "label": "Сменить пароль"
+    },
+    "logout": {
+      "label": "Выйти"
+    },
     "language": {
-      "title": "Язык приложения"
+      "title": "Язык приложения",
+      "label": "Язык"
     }
   }
 }

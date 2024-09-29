@@ -14,7 +14,7 @@ const items = [
   <ApplicationBar>
     <template #left>
       <UAvatar size="md" icon="i-ph-user-bold" class="bg-gray-100"/>
-      <div class="text-lg font-bold">Главная  {{ $t("helloWorld") }}</div>
+      <div class="text-lg font-bold">Главная</div>
     </template>
     <template #right>
       <UButton size="lg" color="gray" variant="ghost" icon="i-ph-list-bold" to="settings"/>
