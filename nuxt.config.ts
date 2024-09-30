@@ -34,7 +34,6 @@ export default defineNuxtConfig({
   i18n,
   dayjs,
   pwa: {
-    registerType: 'autoUpdate',
     manifest: {
       name: 'Glitch',
       short_name: 'Glitch',
@@ -105,10 +104,6 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: "/",
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
-    },
-    injectManifest: {
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
     },
     client: {
       installPrompt: true,
