@@ -37,7 +37,7 @@ const items = [
         </UDropdown>
       </nuxt-link>
       <div class="text-sm whitespace-pre-wrap">
-        <span class="select-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
+        <span class="select-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
         <nuxt-link to="w-123" class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
           Показать еще
         </nuxt-link>
@@ -66,7 +66,7 @@ const items = [
         </UDropdown>
       </nuxt-link>
       <div class="text-sm whitespace-pre-wrap">
-        <span class="select-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
+        <span class="select-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
         <nuxt-link to="w-123" class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
           Показать еще
         </nuxt-link>
@@ -95,7 +95,7 @@ const items = [
         </UDropdown>
       </nuxt-link>
       <div class="text-sm whitespace-pre-wrap">
-        <span class="select-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
+        <span class="select-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
         <nuxt-link to="w-123" class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
           Показать еще
         </nuxt-link>
@@ -124,7 +124,7 @@ const items = [
         </UDropdown>
       </nuxt-link>
       <div class="text-sm whitespace-pre-wrap">
-        <span class="select-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
+        <span class="select-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
         <nuxt-link to="w-123" class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
           Показать еще
         </nuxt-link>
@@ -153,7 +153,7 @@ const items = [
         </UDropdown>
       </nuxt-link>
       <div class="text-sm whitespace-pre-wrap">
-        <span class="select-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
+        <span class="select-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
         <nuxt-link to="w-123" class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
           Показать еще
         </nuxt-link>
@@ -182,7 +182,7 @@ const items = [
         </UDropdown>
       </nuxt-link>
       <div class="text-sm whitespace-pre-wrap">
-        <span class="select-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
+        <span class="select-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
         <nuxt-link to="w-123" class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
           Показать еще
         </nuxt-link>
@@ -211,7 +211,7 @@ const items = [
         </UDropdown>
       </nuxt-link>
       <div class="text-sm whitespace-pre-wrap">
-        <span class="select-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
+        <span class="select-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
         <nuxt-link to="w-123" class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
           Показать еще
         </nuxt-link>
