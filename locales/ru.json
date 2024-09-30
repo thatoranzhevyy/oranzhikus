@@ -1,9 +1,17 @@
 {
-  "helloWorld" : "Привет мир",
   "settings": {
     "title": "Настройки",
     "appearance": {
       "label": "Внешний вид"
+    },
+    "faq": {
+      "label": "Вопросы и ответы"
+    },
+    "bug": {
+      "label": "Сообщить о проблеме"
+    },
+    "about": {
+      "label": "О приложении"
     },
     "devices": {
       "label": "Устройства"

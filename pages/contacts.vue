@@ -250,7 +250,7 @@ const users = [
       <UInput class="w-full" icon="i-ph-magnifying-glass" placeholder="Введите имя или фамилию"/>
       <UButton color="gray" variant="ghost" label="Отменить"/>
     </div>
-    <div v-for="user in users">
+    <nuxt-link v-for="user in users" :to="'@'+user.username">
       <div class="flex items-center px-2 py-1.5 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
         <UAvatar :alt="user.name ?? user.username" size="md"/>
         <div class="flex-1 min-w-0 ml-2">
@@ -260,7 +260,7 @@ const users = [
           </div>
         </div>
       </div>
-    </div>
+    </nuxt-link>
     <div class="text-gray-500 text-center text-xs font-bold py-2">
       {{ users.length }} пользователей
     </div>

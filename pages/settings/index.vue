@@ -28,11 +28,11 @@ const isOpenBug = ref(false)
     <div class="bg-white dark:bg-gray-900 rounded-md p-1">
       <div class="px-4 pt-2 font-semibold">Помощь</div>
       <UButton to="/settings/faq" icon="i-ph-question-bold" size="xl" color="gray" variant="ghost"
-               label="Вопросы и ответы" block class="justify-start"/>
+               :label="$t('settings.faq.label')"  block class="justify-start"/>
       <UButton icon="i-ph-bug-bold" size="xl" color="gray" variant="ghost" @click="isOpenBug = true"
-               label="Сообщить о проблеме" block class="justify-start"/>
-      <UButton to="/settings/about" icon="i-ph-info-bold" size="xl" color="gray" variant="ghost" label="О приложении"
-               block class="justify-start"/>
+               :label="$t('settings.bug.label')"  block class="justify-start"/>
+      <UButton to="/settings/about" icon="i-ph-info-bold" size="xl" color="gray" variant="ghost"
+               :label="$t('settings.about.label')" block class="justify-start"/>
     </div>
   </div>
 

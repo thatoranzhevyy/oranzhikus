@@ -2,6 +2,8 @@
 definePageMeta({layout: 'none'});
 useSeoMeta({title: 'Устройства'});
 
+const dayjs = useDayjs();
+
 const isOpenDisconnectAll = ref(false);
 const isOpenDevice = ref(false);
 const isOpenDeviceAccept = ref(false);
@@ -77,7 +79,9 @@ const devices = [
           <div class="flex-1 min-w-0 ml-2">
             <div class="font-semibold truncate">{{ current_device.name }}</div>
             <div class="text-gray-500 text-xs font-normal truncate">
-              {{ current_device.ip }}: <span class="text-primary-500">{{ current_device.last_used_at }}</span>
+              {{ current_device.ip }}: <span class="text-primary-500">{{
+                dayjs(current_device.last_used_at).fromNow()
+              }}</span>
             </div>
           </div>
         </div>
@@ -99,7 +103,7 @@ const devices = [
           <div class="flex-1 min-w-0 ml-2">
             <div class="font-semibold truncate">{{ device.name }}</div>
             <div class="text-gray-500 text-xs font-normal truncate">
-              {{ device.ip }}: <span class="text-primary-500">{{ device.last_used_at }}</span>
+              {{ device.ip }}: <span class="text-primary-500">{{ dayjs(device.last_used_at).fromNow() }}</span>
             </div>
           </div>
         </div>
@@ -109,9 +113,7 @@ const devices = [
   <UModal v-model="isOpenDisconnectAll">
     <div class="p-5 flow-root space-y-6">
       <div class="space-y-4">
-        <div class="text-lg font-bold leading-6">
-          Завершить сеансы
-        </div>
+        <div class="text-lg font-bold leading-6">Завершить сеансы</div>
         <div>Вы точно хотите завершить все сеансы, кроме текущего?</div>
       </div>
       <div class="float-right space-x-4">
@@ -129,16 +131,13 @@ const devices = [
           <div class="text-lg font-bold leading-6 text-gray-900 dark:text-white">Сеанс</div>
         </template>
         <template #right>
-          <UButton size="lg" color="red" variant="ghost" label="Завершить сеанс"
-                   @click="isOpenDeviceAccept = true"/>
+          <UButton size="lg" color="red" variant="ghost" label="Завершить сеанс" @click="isOpenDeviceAccept = true"/>
         </template>
       </ApplicationBar>
       <div class="p-2 space-y-6">
         <div class="flex flex-col items-center">
           <UAvatar icon="i-ph-devices" size="xl"/>
-          <div class="text-lg font-bold leading-6">
-            {{ current_device.name }}
-          </div>
+          <div class="text-lg font-bold leading-6">{{ current_device.name }}</div>
           <div class="text-gray-500 text-xs font-normal truncate">
             {{ current_device.ip }}: <span class="text-primary-500">{{ current_device.last_used_at }}</span>
           </div>
@@ -148,9 +147,7 @@ const devices = [
     <UModal v-model="isOpenDeviceAccept">
       <div class="p-5 flow-root space-y-6">
         <div class="space-y-4">
-          <div class="text-lg font-bold leading-6">
-            Завершить сеанс
-          </div>
+          <div class="text-lg font-bold leading-6">Завершить сеанс</div>
           <div>Вы точно хотите завершить сеанс?</div>
         </div>
         <div class="float-right space-x-4">

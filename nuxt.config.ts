@@ -1,12 +1,15 @@
+import {i18n} from './config/i18n'
+import {colorMode} from './config/color'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: {enabled: true},
   modules: [
-    "@nuxt/image",
     '@nuxt/content',
+    '@nuxt/image',
     '@nuxt/ui',
     '@nuxtjs/i18n',
+    'dayjs-nuxt',
   ],
   app: {
     head: {
@@ -25,24 +28,12 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/styles/scrollbars.css'],
-  colorMode: {
-    preference: 'dark',
-    fallback: 'dark',
-    hid: 'nuxt-color-mode-script',
-    globalName: '__NUXT_COLOR_MODE__',
-    componentName: 'ColorScheme',
-    classPrefix: '',
-    classSuffix: '-mode',
-    storageKey: 'system-color-mode',
-  },
-  i18n: {
-    lazy: true,
-    langDir: 'locales',
-    strategy: 'no_prefix',
-    defaultLocale: 'en',
-    locales: [
-      {name: 'Русский', code: 'ru', file: 'ru.json'},
-      {name: 'English', code: 'en', file: 'en.json'},
-    ],
+  colorMode,
+  i18n,
+  dayjs: {
+    locales: ['ru', 'en'],
+    plugins: ['relativeTime', 'utc', 'timezone'],
+    defaultLocale: 'ru',
+    defaultTimezone: import.meta.env.APP_TIMEZONE,
   },
 })
