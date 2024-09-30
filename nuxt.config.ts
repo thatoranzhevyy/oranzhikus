@@ -1,5 +1,6 @@
 import {i18n} from './config/i18n'
 import {colorMode} from './config/color'
+import {dayjs} from './config/dayjs'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -30,10 +31,5 @@ export default defineNuxtConfig({
   css: ['~/styles/scrollbars.css'],
   colorMode,
   i18n,
-  dayjs: {
-    locales: ['ru', 'en'],
-    plugins: ['relativeTime', 'utc', 'timezone'],
-    defaultLocale: 'ru',
-    defaultTimezone: import.meta.env.APP_TIMEZONE,
-  },
+  dayjs,
 })
