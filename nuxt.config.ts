@@ -37,6 +37,7 @@ export default defineNuxtConfig({
     manifest: {
       name: 'LearningBy',
       short_name: 'LearningBy',
+      theme_color: "#b066ff",
       description: "Testing LearningBy PWA",
       display: 'fullscreen',
       icons: [
