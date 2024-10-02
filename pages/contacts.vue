@@ -1,9 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({title: 'Контакты'});
 
-import {getAllAccounts} from '~/services';
 
-const {data: allAccounts, pending, error} = await getAllAccounts();
 const users = [
   {
     "id": "9d0fb49d-5050-45cf-8253-a21b8200fa6c",
@@ -254,7 +252,7 @@ const users = [
       <UInput class="w-full" icon="i-ph-magnifying-glass" placeholder="Введите имя или фамилию"/>
       <UButton color="gray" variant="ghost" label="Отменить"/>
     </div>
-    <nuxt-link v-for="user in allAccounts.users" :to="'@'+user.username">
+    <nuxt-link v-for="user in users" :to="'@'+user.username">
       <div class="flex items-center px-2 py-1.5 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
         <UAvatar :alt="user.name ?? user.username" size="md"/>
         <div class="flex-1 min-w-0 ml-2">
@@ -266,7 +264,7 @@ const users = [
       </div>
     </nuxt-link>
     <div class="text-gray-500 text-center text-xs font-bold py-2">
-      {{ allAccounts.users.length }} пользователей
+      {{ users.length }} пользователей
     </div>
   </div>
 </template>
