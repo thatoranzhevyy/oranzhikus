@@ -21,7 +21,7 @@ useSeoMeta({title: `@${route.params.account}`});
   </ApplicationBar>
   <div class="max-w-3xl mx-auto space-y-2 p-1.5">
     <div class="bg-white dark:bg-gray-900 rounded-md p-2 space-y-2">
-      <nuxt-link to="@civanova" class="flex items-center">
+      <div class="flex items-center">
         <UAvatar alt="Алла Сергеевна Филиппова" size="md"/>
         <div class="flex-1 min-w-0 ml-2">
           <div class="font-semibold truncate">Алла Сергеевна Филиппова</div>
@@ -29,10 +29,10 @@ useSeoMeta({title: `@${route.params.account}`});
             {{ dayjs("2024-09-24T06:06:24.000000Z").utc().format('DD MMM HH:mm') }}
           </div>
         </div>
-      </nuxt-link>
+      </div>
       <div class="text-sm whitespace-pre-wrap">
         <span class="select-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
-        <nuxt-link to="/@civanova/tttetete" class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
+        <nuxt-link :to="`/@${route.params.account}/tttetete`" class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
           Показать еще
         </nuxt-link>
       </div>
@@ -42,7 +42,7 @@ useSeoMeta({title: `@${route.params.account}`});
       </div>
       <div>
         <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="2"/>
-        <u-button size="xs" color="gray" variant="ghost" icon="i-ph-chat-circle-bold" label="2" to="/@civanova/tttetete"/>
+        <u-button size="xs" color="gray" variant="ghost" icon="i-ph-chat-circle-bold" label="2" :to="`/@${route.params.account}/tttetete`"/>
         <u-button size="xs" color="gray" variant="ghost" icon="i-ph-share-fat-bold" label="1"/>
       </div>
     </div>

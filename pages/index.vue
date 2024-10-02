@@ -38,7 +38,8 @@ const items = [
       </nuxt-link>
       <div class="text-sm whitespace-pre-wrap">
         <span class="select-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
-        <nuxt-link to="/@civanova/tttetete" class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
+        <nuxt-link to="/@civanova/tttetete"
+                   class="inline-block text-primary-500 px-1 rounded-md hover:bg-primary-200/20">
           Показать еще
         </nuxt-link>
       </div>
@@ -48,7 +49,8 @@ const items = [
       </div>
       <div>
         <u-button size="xs" color="primary" variant="ghost" icon="i-ph-heart-bold" label="2"/>
-        <u-button size="xs" color="gray" variant="ghost" icon="i-ph-chat-circle-bold" label="2" to="/@civanova/tttetete"/>
+        <u-button size="xs" color="gray" variant="ghost" icon="i-ph-chat-circle-bold" label="2"
+                  to="/@civanova/tttetete"/>
         <u-button size="xs" color="gray" variant="ghost" icon="i-ph-share-fat-bold" label="1"/>
       </div>
     </div>
