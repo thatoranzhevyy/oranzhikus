@@ -2,6 +2,7 @@
 definePageMeta({layout: 'none'});
 useSeoMeta({title: 'Язык приложения'});
 const {locale, setLocale, locales} = useI18n()
+
 </script>
 
 <template>

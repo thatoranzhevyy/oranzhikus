@@ -1,25 +1,22 @@
 <script setup lang="ts">
+const route = useRoute()
 const dayjs = useDayjs();
 
-useSeoMeta({title: 'Главная'});
-
-const items = [
-  [{
-    label: 'Скопировать ссылку'
-  }, {
-    label: 'Пожаловаться'
-  }]
-]
+definePageMeta({layout: 'none'});
+useSeoMeta({title: `@${route.params.account}`});
 </script>
 
 <template>
   <ApplicationBar>
     <template #left>
-      <UAvatar size="md" icon="i-ph-user-bold" class="bg-gray-100"/>
-      <div class="text-lg font-bold">Главная</div>
-    </template>
-    <template #right>
-      <UButton size="lg" color="gray" variant="ghost" icon="i-ph-list-bold" to="settings"/>
+      <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-left-bold" @click="$router.back()"/>
+      <div class="flex items-center">
+        <UAvatar alt="Лариса Евгеньевна Орехова" size="md"/>
+        <div class="flex-1 min-w-0 ml-2">
+          <div class="text-sm font-semibold truncate">Лариса Евгеньевна Орехова</div>
+          <div class="text-gray-500 text-xs font-normal truncate">@{{ route.params.account }}</div>
+        </div>
+      </div>
     </template>
   </ApplicationBar>
   <div class="max-w-3xl mx-auto space-y-2 p-1.5">
@@ -32,9 +29,6 @@ const items = [
             {{ dayjs("2024-09-24T06:06:24.000000Z").utc().format('DD MMM HH:mm') }}
           </div>
         </div>
-        <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-          <UButton size="lg" color="gray" variant="ghost" icon="i-ph-dots-three-vertical-bold"/>
-        </UDropdown>
       </nuxt-link>
       <div class="text-sm whitespace-pre-wrap">
         <span class="select-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 150</span>
@@ -54,3 +48,7 @@ const items = [
     </div>
   </div>
 </template>
+
+<style scoped>
+
+</style>
