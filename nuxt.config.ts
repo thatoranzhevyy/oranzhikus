@@ -39,7 +39,7 @@ export default defineNuxtConfig({
       short_name: 'LearningBy',
       theme_color: "#b066ff",
       description: "Testing LearningBy PWA",
-      display: 'fullscreen',
+      display: 'standalone',
       icons: [
         {
           "src": "icons/icon-72x72.png",
