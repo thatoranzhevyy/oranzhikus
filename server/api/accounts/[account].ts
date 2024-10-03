@@ -1,5 +1,6 @@
 export default defineEventHandler((event) => {
-  return [
+  const account = getRouterParam(event, 'account')
+  const accounts = [
     {
       "id": "9d0a719f-feff-49b0-9172-97e234007279",
       "name": "Charley Zemlak",
@@ -251,4 +252,5 @@ export default defineEventHandler((event) => {
       "updated_at": "2024-09-18T17:56:44.000000Z"
     }
   ]
+  return accounts.filter(obj => obj.username === account)[0]
 })
