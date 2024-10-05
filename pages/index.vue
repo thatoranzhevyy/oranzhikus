@@ -12,6 +12,7 @@ const {pending, data: publications} = await useFetch('/api/publications')
       <div class="text-lg font-bold">Главная</div>
     </template>
     <template #right>
+      <UButton size="lg" color="gray" variant="ghost" icon="i-ph-plus-circle-bold" to="publication"/>
       <UButton size="lg" color="gray" variant="ghost" icon="i-ph-list-bold" to="settings"/>
     </template>
   </ApplicationBar>
