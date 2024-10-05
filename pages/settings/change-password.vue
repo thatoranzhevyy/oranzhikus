@@ -4,16 +4,25 @@ useSeoMeta({title: 'Сменить пароль'});
 </script>
 
 <template>
+  <ApplicationBar>
+    <template #left>
+      <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-left-bold" to="/settings"/>
+    </template>
+  </ApplicationBar>
+
   <div class="max-w-2xl mx-auto">
     <div class="h-dvh px-4 flex flex-col justify-center space-y-4">
-      <div>
-        <u-button size="sm" color="gray" variant="solid" label="Назад" @click="$router.back()"/>
-      </div>
       <div class="text-4xl xl:text-5xl font-extrabold">
         Изменение пароля
       </div>
-      <div>
-        Пароль должен содержать не менее 6 символов, включая цифры, буквы и специальные символы (!$@%).
+      <div class="text-gray-500 text-xs font-normal">
+        <div>
+          Вы выйдете из всех сеансов, кроме этого, чтобы защитить свою учетную запись, если кто-то попытается получить доступ.
+        </div>
+        <br>
+        <div>
+          Ваш пароль должен состоять как минимум из 8 символов и включать комбинацию цифр, букв и специальных символов (!$@%).
+        </div>
       </div>
       <UForm ref="form" class="space-y-4">
         <UFormGroup label="Текущий пароль" name="current_password" required>

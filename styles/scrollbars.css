@@ -1,26 +1,26 @@
 * {
-  scrollbar-color: #8885;
+    scrollbar-color: #8885;
 }
 
 ::-webkit-scrollbar {
-  position: fixed;
-  width: 10px;
+    position: fixed;
+    width: 10px;
 }
 
 ::-webkit-scrollbar:horizontal {
-  height: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 1px;
+    border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8885;
-  border-radius: 1px;
+    background: #8885;
+    border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  cursor: pointer;
-  background: #8886;
+    cursor: pointer;
+    background: #8886;
 }

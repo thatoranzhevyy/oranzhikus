@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({title: 'Контакты'});
-const {pending,data: accounts} = await useFetch('/api/accounts')
+const {pending, data: accounts} = await useFetch('/api/accounts')
 </script>
 
 <template>
