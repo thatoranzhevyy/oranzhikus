@@ -6,7 +6,7 @@
         color="gray"
         variant="ghost"
         aria-label="Theme"
-        :label="isDark ? 'Переключить на дневную тему' : 'Переключить на ночную тему'"
+        :label="$t('settings.appearance.color_mode.'+colorMode.value)"
         @click="isDark = !isDark"
         block
         class="justify-start"

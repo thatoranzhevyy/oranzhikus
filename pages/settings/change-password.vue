@@ -10,7 +10,7 @@ useSeoMeta({title: 'Сменить пароль'});
     </template>
   </ApplicationBar>
 
-  <div class="max-w-2xl mx-auto">
+  <div class="max-w-3xl mx-auto">
     <div class="h-dvh px-4 flex flex-col justify-center space-y-4">
       <div class="text-4xl xl:text-5xl font-extrabold">
         Изменение пароля

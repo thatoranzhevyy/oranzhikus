@@ -1,6 +1,6 @@
-import type { PluginFunc, locale } from 'dayjs'
-import { defineNuxtPlugin, useNuxtApp } from '#app'
-import { useDayjs } from '#imports'
+import type {PluginFunc, locale} from 'dayjs'
+import {defineNuxtPlugin, useNuxtApp} from '#app'
+import {useDayjs} from '#imports'
 
 const localePlugin: PluginFunc = (_option, _dayjsClass, dayjsFactory) => {
   const locale = dayjsFactory.locale
@@ -8,7 +8,7 @@ const localePlugin: PluginFunc = (_option, _dayjsClass, dayjsFactory) => {
     if (preset)
       console.warn('Use i18n.setLocale instead of dayjs.locale')
 
-    const { $i18n: i18n } = useNuxtApp()
+    const {$i18n: i18n} = useNuxtApp()
     return locale(i18n.locale.value)
   }
 }
@@ -20,7 +20,7 @@ export default defineNuxtPlugin({
   hooks: {
     'app:created'() {
       const nuxtApp = useNuxtApp()
-      const { $i18n: i18n } = nuxtApp
+      const {$i18n: i18n} = nuxtApp
       const dayjs = useDayjs()
 
       if (!setLocale)
@@ -32,7 +32,7 @@ export default defineNuxtPlugin({
       dayjs.extend(localePlugin)
     },
 
-    'i18n:beforeLocaleSwitch'({ newLocale }) {
+    'i18n:beforeLocaleSwitch'({newLocale}) {
       if (setLocale)
         setLocale(newLocale)
     },

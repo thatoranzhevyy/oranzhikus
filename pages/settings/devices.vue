@@ -52,7 +52,7 @@ const devices = [
   <ApplicationBar>
     <template #left>
       <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-left-bold" to="/settings"/>
-      <div class="text-lg font-bold">Устройства</div>
+      <div class="text-lg font-bold">{{ $t('settings.devices.title') }}</div>
     </template>
     <template #right>
       <UButton size="lg" color="gray" variant="ghost" icon="i-ph-arrow-clockwise-bold"/>
@@ -60,18 +60,12 @@ const devices = [
   </ApplicationBar>
   <div class="max-w-3xl mx-auto space-y-2 p-1.5">
     <div class="text-gray-500 text-xs font-normal px-4">
-      <div>
-        Здесь перечислены все устройства, на которых выполнен вход в вашу учётную запись. Вы можете выйти из
-        учётной записи на каждом из них по отдельности или на всех сразу.
-      </div>
+      <div>{{ $t('settings.devices.text.text1') }}</div>
       <br>
-      <div>
-        Если вы обнаружили в списке незнакомое устройство, немедленно выполните выход на этом устройстве и смените
-        пароль от вашей учётной записи.
-      </div>
+      <div>{{ $t('settings.devices.text.text2') }}</div>
     </div>
     <div class="bg-white dark:bg-gray-900 rounded-md p-1">
-      <div class="px-3.5 py-2 font-semibold">Текущее устройство</div>
+      <div class="px-3.5 py-2 font-semibold">{{ $t('settings.devices.current.title') }}</div>
       <div>
         <div class="flex items-center px-2 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
              @click="isOpenDevice = true">
@@ -85,18 +79,15 @@ const devices = [
             </div>
           </div>
         </div>
-        <UButton icon="i-ph-minus-circle-bold" size="xl" color="red" variant="ghost" label="Завершить все другие сеансы"
-                 block class="justify-start" @click="isOpenDisconnectAll = true"/>
+        <UButton icon="i-ph-minus-circle-bold" size="xl" color="red" variant="ghost" block class="justify-start"
+                 :label="$t('settings.devices.current.disconnect_all.button')" @click="isOpenDisconnectAll = true"/>
       </div>
     </div>
     <div class="text-gray-500 text-xs font-normal px-4">
-      <div>
-        Выйти на всех устройствах, кроме этого. Вам придётся повторно войти в учётную запись на всех устройствах, где вы
-        выполнили выход.
-      </div>
+      <div>{{ $t('settings.devices.text.text3') }}</div>
     </div>
     <div v-if="devices" class="bg-white dark:bg-gray-900 rounded-md p-1">
-      <div class="px-3.5 py-2 font-semibold">Активные сеансы</div>
+      <div class="px-3.5 py-2 font-semibold">{{ $t('settings.devices.active.title') }}</div>
       <div v-for="device in devices">
         <div class="flex items-center px-2 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
           <UAvatar icon="i-ph-devices" size="md"/>

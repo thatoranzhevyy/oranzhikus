@@ -1,14 +1,36 @@
 <script setup lang="ts">
 const dayjs = useDayjs();
 
+import {useClipboard} from '@vueuse/core'
+
+const {copy} = useClipboard()
 definePageMeta({layout: 'none'});
 
 const items = [
-  [{
-    label: 'Скопировать ссылку'
-  }, {
-    label: 'Пожаловаться'
-  }]
+  [
+    {
+      label: 'Скопировать ссылку',
+      click: () => {
+        useToast().add({
+          title: 'Ссылка скопирована',
+          color: "green",
+          timeout: 3000,
+          icon: 'i-heroicons-check-circle',
+        })
+        copy(location.href)
+      }
+    },
+    {
+      label: 'Пожаловаться',
+      click: () => {
+        useToast().add({
+          title: 'Данная публикация отправлена на проверку',
+          color: "green",
+          icon: 'i-heroicons-check-circle',
+        })
+      }
+    }
+  ]
 ]
 </script>
 
@@ -115,7 +137,7 @@ const items = [
             </div>
           </div>
         </div>
-        <div class="sticky bottom-0 py-1 z-[55] bg-white dark:bg-gray-900">
+        <div class="fixed w-full left-0 bottom-0 py-1 z-[55] bg-white dark:bg-gray-900">
           <div class="flex">
             <UButton color="gray" variant="ghost" icon="i-ph-paperclip"/>
             <UTextarea :rows="1" autoresize :maxrows="3" variant="none" class="w-full" placeholder="Комментрии"/>

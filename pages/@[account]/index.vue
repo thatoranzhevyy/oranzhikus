@@ -4,8 +4,12 @@ const dayjs = useDayjs();
 
 definePageMeta({layout: 'none'});
 useSeoMeta({title: `@${route.params.account}`});
-const {data: account} = await useFetch(`/api/accounts/${route.params.account}`)
-const {data: publications} = await useFetch(`/api/publications/${route.params.account}`)
+const {data: account} = await useFetch(`/api/accounts/${route.params.account}`, {
+  lazy: true
+})
+const {data: publications} = await useFetch(`/api/publications/${route.params.account}`, {
+  lazy: true
+})
 </script>
 
 <template>

@@ -2,7 +2,9 @@
 const dayjs = useDayjs();
 
 useSeoMeta({title: 'Главная'});
-const {pending, data: publications} = await useFetch('/api/publications')
+const {pending, data: publications} = await useFetch('/api/publications', {
+  lazy: true
+})
 </script>
 
 <template>
